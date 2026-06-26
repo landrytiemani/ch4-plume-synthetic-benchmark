@@ -1,0 +1,17 @@
+\begin{table*}[t]
+\centering
+\caption{Inference efficiency on held-out synthetic TEST patches ($128\times128$, batch size 8, CUDA). Latency is model-only forward pass (data loading and plume generation excluded). GFLOPs/image counts convolution, transposed-convolution, and linear-layer operations only. Models are ranked by median latency.}
+\label{tab:efficiency}
+\small
+\begin{tabular}{lccccc}
+\toprule
+Model & Params (M) & GFLOPs/img & p50 (ms) & img/s & TFLOPs \\
+\midrule
+U-Net & 1.93 & 5.32 & 0.573 & 1839 & 9.78 \\
+U-Net++ & 1.93 & 5.46 & 0.592 & 1923 & 10.51 \\
+Attention U-Net & 1.97 & 5.52 & 0.616 & 1405 & 7.75 \\
+DeepLabV3+ & 1.33 & 11.46 & 0.662 & 1507 & 17.26 \\
+PhysTAUNet & 3.75 & 6.61 & 0.882 & 1173 & 7.76 \\
+\bottomrule
+\end{tabular}
+\end{table*}

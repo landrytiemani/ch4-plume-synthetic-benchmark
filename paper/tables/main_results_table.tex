@@ -1,0 +1,19 @@
+\begin{table*}[t]
+\centering
+\caption{Segmentation accuracy on the controlled synthetic benchmark, validation (VAL) and held-out synthetic test (TEST) splits. Models are ranked by TEST F1. Tolerant metrics use a 2-pixel boundary dilation. Bold marks the best value per column.}
+\label{tab:main_results}
+\small
+\begin{tabular}{l ccccc ccccc}
+\toprule
+ & \multicolumn{5}{c}{VAL} & \multicolumn{5}{c}{TEST} \\
+\cmidrule(lr){2-6} \cmidrule(lr){7-11}
+Model & F1 & IoU & Prec. & Rec. & Tol.\,F1 & F1 & IoU & Prec. & Rec. & Tol.\,F1 \\
+\midrule
+Attention U-Net & \textbf{0.461} & \textbf{0.300} & 0.442 & 0.482 & \textbf{0.588} & \textbf{0.455} & \textbf{0.294} & 0.442 & 0.469 & \textbf{0.577} \\
+DeepLabV3+ & 0.439 & 0.281 & \textbf{0.474} & 0.409 & 0.556 & 0.445 & 0.286 & \textbf{0.484} & 0.411 & 0.557 \\
+U-Net & 0.451 & 0.291 & 0.384 & \textbf{0.546} & 0.581 & 0.437 & 0.280 & 0.377 & \textbf{0.520} & 0.560 \\
+PhysTAUNet & 0.448 & 0.289 & 0.405 & 0.502 & 0.570 & 0.436 & 0.278 & 0.386 & 0.500 & 0.551 \\
+U-Net++ & 0.443 & 0.285 & 0.409 & 0.484 & 0.563 & 0.419 & 0.265 & 0.388 & 0.455 & 0.534 \\
+\bottomrule
+\end{tabular}
+\end{table*}

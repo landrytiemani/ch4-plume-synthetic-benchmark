@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ch4-plume-synthetic-publication"
+version = "0.1.0"
+description = "Synthetic Sentinel-2 L1C methane plume segmentation benchmark with realistic plume morphology"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.26",
+  "pandas>=2.2",
+  "rasterio>=1.3",
+  "matplotlib>=3.8",
+  "torch>=2.2",
+  "tqdm>=4.66",
+  "requests>=2.31",
+]
+
+[project.optional-dependencies]
+acquire = [
+  "earthengine-api>=0.1.390",   # GEE chip export  (Step 1)
+]
+labels = [
+  "earthaccess>=0.9",           # NASA EMIT download (Step 0c)
+]
+
+[project.scripts]
+ch4l1c = "ch4l1c.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

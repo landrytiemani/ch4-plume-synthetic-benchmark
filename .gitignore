@@ -1,0 +1,37 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+audit_logs/
+
+# Large data directories (not committed)
+data/raw/sentinel2_l1c/exports/*.tif
+data/raw/sentinel2_l1c/exports/*.tiff
+data/raw/sentinel2_l1c/*.csv
+data/raw/splits/*.csv
+data/sentinel2_l1c/
+data/training_l1c/
+data/models/
+reports/pdf_render_check/
+*.pt
+*.pth
+
+# Keep directory scaffolding
+!data/raw/sentinel2_l1c/exports/.gitkeep
+!data/raw/splits/.gitkeep
+
+# LaTeX build artifacts
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.bbl
+paper/*.blg
+paper/*.fls
+paper/*.fdb_latexmk
+paper/*.synctex.gz
+paper/test_*.pdf
+paper/test_*.aux
+paper/main_compiled.pdf
+paper/supplement_compiled.pdf
